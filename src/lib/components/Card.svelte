@@ -7,25 +7,27 @@
         thumbnail: string;
         title: string;
         description: string;
-        footer: Snippet;
+        footer?: Snippet;
         thumbnail_alt?: string;
-    } & HTMLAttributes<HTMLDivElement>;
+    }
 
-    let { thumbnail = link("dummy_image", { detail: "300x4:3" }), title, description, footer, thumbnail_alt, ...rest }: Props = $props()
+    let { thumbnail = link("dummy_image", { detail: "300x4:3" }), title, description, footer, thumbnail_alt }: Props = $props()
 </script>
 
-{/* ts-ignore */ null}
-<wa-card with-image with-footer class="card-overview" ...rest>
+<!-- @ts-ignore -->
+<wa-card with-image with-footer class="card-overview">
     <img
       slot="image"
       src={thumbnail}
       alt={thumbnail_alt ?? ""}
     />
-    <strong>{title}</strong>
+    <strong>{title}</strong><br />
     {description}<br />
-    <div slot="footer" class="wa-split">
-      {@render footer()}
-    </div>
+    {#if footer}
+        <div slot="footer" class="wa-split">
+        {@render footer()}
+        </div>
+    {/if}
 </wa-card>
 
 <style>
