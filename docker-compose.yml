@@ -1,0 +1,15 @@
+services:
+  web:
+    build: 
+      target: dev
+    ports:
+      - "5173:5173"
+    develop:
+      watch:
+        - action: rebuild
+          path: ./package.json
+        - action: sync
+          path: ./app
+          target: ./app
+          ignore:
+            - ../app/node_modules
