@@ -1,8 +1,8 @@
 <script>
-	import Navbar from "./Navbar.svelte";
+	import Navbar from './Navbar.svelte';
 </script>
 
 <header>
-   <p>株式会社GBR</p>
-   <Navbar />
+	<p>株式会社GBR</p>
+	<Navbar />
 </header>
