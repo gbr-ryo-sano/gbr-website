@@ -15,7 +15,10 @@ const route_config = {
 	},
 	partner: {
 		path: '/partner'
-	}
+	},
+    dummy_image: {
+        path: "https://dummyimage.com/:detail",
+    }
 } as const satisfies RouteConfig;
 
 export const link = link_generator(route_config);
