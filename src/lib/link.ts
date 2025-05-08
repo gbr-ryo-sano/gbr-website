@@ -7,14 +7,20 @@ const route_config = {
 	about: {
 		path: '/about'
 	},
+	philosophy: {
+		path: "/philosophy"
+	},
 	business: {
 		path: '/business'
 	},
 	recruit: {
 		path: '/recruit'
 	},
-	partner: {
-		path: '/partner'
+	contact: {
+		path: '/contact'
+	},
+	policy: {
+		path: "/policy"
 	},
     dummy_image: {
         path: "https://dummyimage.com/:detail",
